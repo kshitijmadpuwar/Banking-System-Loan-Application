@@ -1,6 +1,9 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,8 +16,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class LoanEntity {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
 	
-  //	private SignUp signUp;
+     //	private SignUp signUp;
 
 	// @OneToOne(mappedBy = "apply", cascade = CascadeType.ALL)
 	//private CibilScore cibilScore;
@@ -25,7 +32,10 @@ public class LoanEntity {
 	private String email;
 	private String occupation;
 	private String designation;
-	private double salary;
+	private Double salary;
+	
+	// Account Details
+	private Double accNumber;
 
 	// Company Information
 	private String companyName;
@@ -37,17 +47,35 @@ public class LoanEntity {
 	private String permanentAddress;
 
 	// Salary and Income Detail
-	private double annualSalary;
-	private double monthlyIncome;
+	private Double annualSalary;
+	private Double monthlyIncome;
 	private String occupationType;
 	private String employerNumber;
 
 	// Loan Detail
-	private double loanAmountRequired;
-	private int loanTenure;
+	private Double loanAmountRequired;
+	private Integer loanTenure;
 
 	// Property Detail
 	private String propertyType;
 	private String propertyLocation;
-	private double propertyValue;
+	private Double propertyValue;
+	
+	//Type of Loan 
+	private String loanType;
+	
+	//Gold Details 
+	private String goldType;
+	private String purity;
+	private Double netWeight;
+	private Double goldRate;
+	private Double totalValue;
+	
+	//Bike Details
+	private String brand ;
+	private String Model;
+	private Double onRoadPrice;
+	private String chassisNo;
+	
+	
 }
