@@ -1,4 +1,4 @@
-# 🏦 Banking System with Loan Application (Spring Boot)
+# 🏦 FinCore Banking Application (Spring Boot)
 
 ## 📌 Overview
 This is a backend banking application developed using Spring Boot that simulates real-world banking operations along with a loan management system.
